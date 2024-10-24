@@ -1,0 +1,29 @@
+.image-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F2F6;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    img {
+        width: 50rem;
+        height: 30rem;
+        border-radius: 10%;
+    }
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+
+    ion-progress-bar {
+        height: 25px;
+        --background: rgba(255, 255, 255, 0.2);
+        --progress-background: #00a85e;
+    }
+}

@@ -1,17 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Carrucel Loader
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Imagen a pantalla completa -->
+  <div class="image-display">
+    <img [src]="currentImage" alt="Imagen actual" />
+  </div>
+   <!-- Barra de progreso en la parte inferior -->
+   <div class="progress-bar-container">
+    <ion-progress-bar [value]="progress / 100"></ion-progress-bar>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Porcentaje centrado en el medio de la pantalla -->
+  <div class="progress-percentage">
+    <p style="display: flex; justify-content: center;">{{ progress | number: '1.0-0' }}%</p>
+  </div>
 </ion-content>
