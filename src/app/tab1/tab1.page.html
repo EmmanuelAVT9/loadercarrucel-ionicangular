@@ -1,23 +1,17 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Carrucel Loader
-    </ion-title>
+    <ion-title>Carrucel Loader</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <!-- Imagen a pantalla completa -->
-  <div class="image-display">
-    <img [src]="currentImage" alt="Imagen actual" />
-  </div>
-   <!-- Barra de progreso en la parte inferior -->
-   <div class="progress-bar-container">
-    <ion-progress-bar [value]="progress / 100"></ion-progress-bar>
-  </div>
+<ion-content fullscreen>
+  <!-- Botón para iniciar el loader -->
+  <ion-button expand="full" (click)="showLoader()">Iniciar Loader</ion-button>
 
-  <!-- Porcentaje centrado en el medio de la pantalla -->
-  <div class="progress-percentage">
-    <p style="display: flex; justify-content: center;">{{ progress | number: '1.0-0' }}%</p>
-  </div>
+  <!-- Componente Full Screen Loader -->
+  <app-full-screen-loader 
+    [images]="loaderImages" 
+    [intervalDuration]="2000"
+    [redirectionRoute]="'/tab3'">
+  </app-full-screen-loader>
 </ion-content>
