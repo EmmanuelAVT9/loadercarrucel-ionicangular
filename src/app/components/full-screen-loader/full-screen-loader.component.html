@@ -1,0 +1,19 @@
+<ion-content *ngIf="isLoaderActive" fullscreen class="loader-container">
+  <!-- Imagen a pantalla completa -->
+  <div class="image-display">
+    <img [src]="currentImage" alt="Imagen actual" />
+  </div>
+
+  <!-- Texto centrado sobre la imagen -->
+  <div class="overlay-text">
+    <h1>{{ currentText }}</h1>
+  </div>
+
+  <!-- Barra de progreso con porcentaje -->
+  <div class="progress-bar-container">
+    <ion-progress-bar [value]="progress / 100"></ion-progress-bar>
+  </div>
+  <div class="progress-percentage">
+    <p>{{ progress | number: '1.0-0' }}%</p>
+  </div>
+</ion-content>

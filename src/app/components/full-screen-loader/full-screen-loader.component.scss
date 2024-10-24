@@ -1,0 +1,56 @@
+.loader-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  
+    .image-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F1F2F6;
+        margin-bottom: 1rem;
+        //padding: 1rem;
+    
+        img {
+            //object-fit: contain;
+            width: 40rem;
+            height: 30rem;
+            width: 100%;
+            border-radius: 10%;
+        }
+    }
+  
+    .overlay-text {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(27, 193, 69);
+      font-size: 1rem;
+      text-align: center;
+      background-color: #F1F2F6;
+    }
+  
+    .progress-bar-container {
+        display: flex;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+    
+        ion-progress-bar {
+            height: 20px;
+            --background: rgba(255, 255, 255, 0.2);
+            --progress-background: #00a85e;
+        }
+    }
+
+    .progress-percentage{
+        display: flex;
+        justify-content: center;
+    }
+  }
+  
