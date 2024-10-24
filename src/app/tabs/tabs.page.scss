@@ -1,1 +1,16 @@
 
+ion-tab-bar{
+    background-color: #17A54D;
+    ion-tab-button{
+        background-color: #17A54D;
+        ion-icon, ion-label{
+            color: #fff;
+        }
+    }
+    ion-tab-button:hover{
+        background-color: #278252;
+        ion-icon, ion-label{
+            color: #fff;
+        }
+    }
+}
